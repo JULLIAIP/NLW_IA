@@ -44,9 +44,16 @@ export async function createTranscription(app: FastifyInstance) {
             prompt,
         })
 
+        await prisma.video.update({
+            where: {
+                id: idVideo
+            },
+            data: {
+                trasncription: transcription.text
+            }
+        })
 
-
-        return transcription.text
+        return response.send(transcription.text).status(200)
 
     })
 
