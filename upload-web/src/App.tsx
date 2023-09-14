@@ -104,7 +104,7 @@ function App() {
               <Select >
 
                 <SelectTrigger>
-                  <SelectValue defautValue='gpt3.5' />
+                  <SelectValue />
                 </SelectTrigger>
 
                 <SelectContent>
