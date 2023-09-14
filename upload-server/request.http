@@ -23,3 +23,14 @@ Content-Type: application/json
 {
     "prompt":"institucional, audio, corporation, produtos"
 }
+
+###
+# @name generateAI
+POST http://localhost:3333/ai/complete
+Content-Type: application/json
+
+{
+    "videoId":"1d51c800-86ee-4841-a89a-c641feda4eed", 
+    "temperature":1,
+    "template":"Gere um resumo suscinto da transcrição do vídeo informado a seguir:'''{transcription}'''"
+}
